@@ -1,14 +1,9 @@
 #!/bin/bash -x
-shopt -s extglob
-read -p "Enter your password:" password
-patternForPassword="^[0-9A-Za-z]*[!@#$%&][A-Za-z0-9]*$"
-if [[ $password =~ $patternForPassword ]]
+read -p "Enter Email to Check: " email
+patternemail="^[A-Za-z+.-]+(\\.[0-9]+)*@[A-Za-z]+(\\.[A-Za-z]+)*(\\.[A-Za-z]{2,})?$"
+if [[ $email =~ $patternemail ]]
 then
-        echo Valid
+        echo "Valid"
 else
-        echo Invalid
+        echo "Not Valid"
 fi
-
-
-
-
