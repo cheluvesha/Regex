@@ -1,10 +1,10 @@
 #!/bin/bash -x
+shopt -s extglob
 read -p "Enter your password:" password
-patternForPassword="^[A-Z]{1}[a-z]{8,}$"
+PatternForPassword="^[0-9A-Za-z]+[0-9]*[A-Za-z0-9]*$"
 if [[ $password =~ $patternForPassword ]]
-        then
-                echo Valid
-        else
-                echo Invalid
+then
+        echo Valid
+else
+        echo Invalid
 fi
-
