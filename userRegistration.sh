@@ -27,5 +27,3 @@ if [[ $emailId =~ $patternForEmailId ]]
         else
                 echo Invalid
 fi
-echo $result
-
