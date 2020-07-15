@@ -1,7 +1,7 @@
 #!/bin/bash -x
 function validFirstname() { 
 read -p "Enter the first name:" firstName
-patternForFirstName="^[A-Z]{1}[a-z]{2,}$"
+patternForFirstName="^[[:upper:]]{1}[[:lower:]]{2,}$"
 if [[ $firstName =~ $patternForFirstName ]]
 then
         echo "Valid Firstname"
@@ -12,7 +12,7 @@ fi
 
 function validLastname() {
 read -p "Enter the last name:" lastName
-patternForLastName="^[A-Z]{1}[a-z]{2,}$"
+patternForLastName="^[[:upper:]]{1}[[:lower:]]{2,}$"
 if [[ $lastName =~ $patternForLastName ]]
 then
         echo "Valid Lastname"
