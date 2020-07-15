@@ -3,9 +3,9 @@ function validFirstname() {
 read -p "Enter the first name:" firstName
 patternForFirstName="^[[:upper:]]{1}[[:lower:]]{2,}$"
 if [[ $firstName =~ $patternForFirstName ]]
-then
-        echo "Valid Firstname"
-else
+        then
+                echo "Valid Firstname"
+        else
         echo "Invalid Firstname Please give an appropriate one"
 fi
 }
@@ -14,10 +14,10 @@ function validLastname() {
 read -p "Enter the last name:" lastName
 patternForLastName="^[[:upper:]]{1}[[:lower:]]{2,}$"
 if [[ $lastName =~ $patternForLastName ]]
-then
-        echo "Valid Lastname"
-else
-        echo "Invalid Lastname Please give an appropriate one"
+        then
+                 echo "Valid Lastname"
+        else
+                echo "Invalid Lastname Please give an appropriate one"
 fi
 }
 
