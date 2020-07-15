@@ -46,7 +46,7 @@ fi
 function validPassword() {
 read -p "Enter your password:" password
 patternForPassword="^.{8,}"
-patternForPassword2="[A-Z]{1,}"
+patternForPassword2="[:upper:]{1,}"
 patternForPassword3="[0-9]{1,}"
 patternForPassword4="^[0-9A-Za-z]*[!@#$%&][A-Za-z0-9]*$"
 if [[ $password =~ $patternForPassword ]]
