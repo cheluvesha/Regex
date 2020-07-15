@@ -1,23 +1,23 @@
 #!/bin/bash -x
 function validFirstname() { 
 read -p "Enter the first name:" firstName
-patternForFirstName="^[A-Z]{1}[a-z]{2,}$"
+patternForFirstName="^[[:upper:]]{1}[[:lower:]]{2,}$"
 if [[ $firstName =~ $patternForFirstName ]]
-then
-        echo "Valid Firstname"
-else
+        then
+                echo "Valid Firstname"
+        else
         echo "Invalid Firstname Please give an appropriate one"
 fi
 }
 
 function validLastname() {
 read -p "Enter the last name:" lastName
-patternForLastName="^[A-Z]{1}[a-z]{2,}$"
+patternForLastName="^[[:upper:]]{1}[[:lower:]]{2,}$"
 if [[ $lastName =~ $patternForLastName ]]
-then
-        echo "Valid Lastname"
-else
-        echo "Invalid Lastname Please give an appropriate one"
+        then
+                 echo "Valid Lastname"
+        else
+                echo "Invalid Lastname Please give an appropriate one"
 fi
 }
 
@@ -46,7 +46,7 @@ fi
 function validPassword() {
 read -p "Enter your password:" password
 patternForPassword="^.{8,}"
-patternForPassword2="[A-Z]{1,}"
+patternForPassword2="[:upper:]{1,}"
 patternForPassword3="[0-9]{1,}"
 patternForPassword4="^[0-9A-Za-z]*[!@#$%&][A-Za-z0-9]*$"
 if [[ $password =~ $patternForPassword ]]
