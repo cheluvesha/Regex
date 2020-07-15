@@ -1,6 +1,6 @@
 #!/bin/bash -x
 read -p "Enter the first name:" firstName
-patternForFirstName="^[A-Z]{1}[a-z]{2,}$"
+patternForFirstName="^[[ :upper: ]]{1}[[ :lower: ]]{2,}$"
 if [[ $firstName =~ $patternForFirstName ]]
 then
         echo Valid
