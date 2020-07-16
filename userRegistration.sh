@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash 
 #UC-1
 shopt -s extglob
 read -p "Enter the first name:" firstName
